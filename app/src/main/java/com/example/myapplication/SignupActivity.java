@@ -19,9 +19,10 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class SignupActivity extends AppCompatActivity implements View.OnClickListener {
-    EditText editemail,editpassword;
+    EditText editemail, editpassword, editname,editname1,editname2,editname3,editcontact1,editcontact2,editcontact3;
     ProgressBar progressBar;
     private FirebaseAuth mAuth;
 
@@ -30,8 +31,16 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
-        editemail=(EditText)findViewById(R.id.email);
-        editpassword=(EditText)findViewById(R.id.password);
+
+        editemail = (EditText) findViewById(R.id.email);
+        editpassword = (EditText) findViewById(R.id.password);
+        editname = (EditText) findViewById(R.id.name);
+        editname1 = (EditText) findViewById(R.id.name1);
+        editname2 = (EditText) findViewById(R.id.name2);
+        editname3 = (EditText) findViewById(R.id.name3);
+        editcontact1 = (EditText) findViewById(R.id.contact1);
+        editcontact2 = (EditText) findViewById(R.id.contact2);
+        editcontact3 = (EditText) findViewById(R.id.contact3);
         mAuth = FirebaseAuth.getInstance();
         findViewById(R.id.signupButton).setOnClickListener(this);
         findViewById(R.id.textviewlogincall).setOnClickListener(this);
@@ -44,6 +53,13 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
         FirebaseUser user= mAuth.getCurrentUser();
         String email=editemail.getText().toString().trim();
         String password=editpassword.getText().toString().trim();
+        final String name = editname.getText().toString().trim();
+        final String name1 = editname1.getText().toString().trim();
+        final String name2 = editname2.getText().toString().trim();
+        final String name3 = editname3.getText().toString().trim();
+        final String contact1 = editcontact1.getText().toString().trim();
+        final String contact2 = editcontact2.getText().toString().trim();
+        final String contact3 = editcontact3.getText().toString().trim();
         if (email.isEmpty())
         {editemail.setError("Email cannot be empty");
             editemail.requestFocus();
@@ -66,8 +82,8 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
             editpassword.requestFocus();
             return;
         }
-        if(user.isEmailVerified())
-        {
+//        if(user.isEmailVerified())
+//        {
 
             progressBar.setVisibility(View.VISIBLE);
             mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -75,7 +91,9 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     progressBar.setVisibility(View.GONE);
                     if (task.isSuccessful())
-                    {
+                    {    User user = new User(name,name1,name2,name3,contact1,contact2,contact3);
+                        FirebaseDatabase.getInstance().getReference("Users")
+                                .child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(user);
                         finish();
                         startActivity(new Intent(SignupActivity.this,MainActivity.class));
                         Toast.makeText(getApplicationContext(),"you have registered successfully!!",Toast.LENGTH_SHORT).show();
@@ -93,11 +111,11 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                     }
                 }
             });
-        }
-        else
-        {
-            Toast.makeText(getApplicationContext(),"Please click on the link send to your email address",Toast.LENGTH_LONG).show();
-        }
+//        }
+//        else
+//        {
+//            Toast.makeText(getApplicationContext(),"Please click on the link send to your email address",Toast.LENGTH_LONG).show();
+//        }
     }
 
     @Override
