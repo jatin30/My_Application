@@ -1,0 +1,138 @@
+{
+  "project_info": {
+    "project_number": "1031254965511",
+    "firebase_url": "https://womensecurity-d6e30.firebaseio.com",
+    "project_id": "womensecurity-d6e30",
+    "storage_bucket": "womensecurity-d6e30.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1031254965511:android:dddc0ef1c2edb5948899a2",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1031254965511-jbvk6hsldui70ne7pir90plm9ktvgpva.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myapplication",
+            "certificate_hash": "8a4b61a674226ec79b0ea91a2c5dcef8ca53ab60"
+          }
+        },
+        {
+          "client_id": "1031254965511-f553eqr5aqf8khelagu8nl6v7nroh1qe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myapplication",
+            "certificate_hash": "6703ef88d9c0de0f8a1159ebc4c1dabf82c35388"
+          }
+        },
+        {
+          "client_id": "1031254965511-3us14nqf79mg4u8s4k9mcih6jd15div0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAXqtaA4DAynjlohh8HktEhCnFcoHnFsc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1031254965511-3us14nqf79mg4u8s4k9mcih6jd15div0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1031254965511:android:6ff64d43efcad8088899a2",
+        "android_client_info": {
+          "package_name": "com.example.womensafety"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1031254965511-miinai9g40gmt5o8pdnfhjtnf0ffrahp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.womensafety",
+            "certificate_hash": "6703ef88d9c0de0f8a1159ebc4c1dabf82c35388"
+          }
+        },
+        {
+          "client_id": "1031254965511-5d40n3phhhhbph62d01uqijri6l7na5p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.womensafety",
+            "certificate_hash": "8a4b61a674226ec79b0ea91a2c5dcef8ca53ab60"
+          }
+        },
+        {
+          "client_id": "1031254965511-3us14nqf79mg4u8s4k9mcih6jd15div0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAXqtaA4DAynjlohh8HktEhCnFcoHnFsc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1031254965511-3us14nqf79mg4u8s4k9mcih6jd15div0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1031254965511:android:4a2eeeccf6666d9c8899a2",
+        "android_client_info": {
+          "package_name": "com.example.womensafetyapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1031254965511-irgftc75e2amtou8l94qaq82lanhukdh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.womensafetyapp",
+            "certificate_hash": "8a4b61a674226ec79b0ea91a2c5dcef8ca53ab60"
+          }
+        },
+        {
+          "client_id": "1031254965511-3us14nqf79mg4u8s4k9mcih6jd15div0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAXqtaA4DAynjlohh8HktEhCnFcoHnFsc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1031254965511-3us14nqf79mg4u8s4k9mcih6jd15div0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
