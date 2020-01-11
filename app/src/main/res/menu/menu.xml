@@ -12,6 +12,10 @@
         android:title="Logout" />
 
     <item
+        android:id="@+id/resetpass"
+        android:title="Update Pass"/>
+
+    <item
         android:id="@+id/feedback"
         android:title="Feedback"/>
 
